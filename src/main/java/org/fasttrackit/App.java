@@ -1,4 +1,5 @@
 package org.fasttrackit;
+
 import java.util.Date;
 
 public class App {
@@ -50,6 +51,20 @@ public class App {
         game.rescuer = "Maria";
         game.dog = "Ianos";
         game.veterinarian = "Mike";
+
+        System.out.println("Wild Animal");
+
+        WildAnimal wildAnimal = new WildAnimal();
+        wildAnimal.tame = "Difficult to tame";
+        System.out.println(wildAnimal.tame);
+        wildAnimal.accommodation = "Accommodates hard to new home";
+
+        System.out.println("Activity: Fetch");
+       Fetch fetch = new Fetch();
+       fetch.cost = 0;
+       fetch.happinessGain = 6;
+        System.out.println("Cost for this activity is = " + fetch.cost);
+        System.out.println("Happiness gain is = " + fetch.happinessGain + "/10");
 
     }
 
