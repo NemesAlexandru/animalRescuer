@@ -1,6 +1,6 @@
 package org.fasttrackit;
 
-public class WildAnimal extends Animal {
+public class DomesticAnimal extends Animal {
 String tame;
 String accommodation;
 }

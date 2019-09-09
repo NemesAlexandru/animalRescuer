@@ -1,7 +1,5 @@
 package org.fasttrackit;
 
-import java.util.Date;
-
 public class App {
     public static void main(String[] args) {
         Rescuer rescuer = new Rescuer();
@@ -41,6 +39,13 @@ public class App {
         recreationalActivity.name = "Fetch";
         System.out.println("Recreational Activity = " + recreationalActivity.name);
 
+        System.out.println("Activity: Fetch");
+        Fetch fetch = new Fetch();
+        fetch.cost = 0;
+        fetch.happinessGain = 6;
+        System.out.println("Cost for this activity is = " + fetch.cost);
+        System.out.println("Happiness gain is = " + fetch.happinessGain + "/10");
+
         Veterinarian veterinarian = new Veterinarian();
         veterinarian.name = "Mike";
         System.out.println("Veterinarian Name = " + veterinarian.name);
@@ -52,19 +57,13 @@ public class App {
         game.dog = "Ianos";
         game.veterinarian = "Mike";
 
-        System.out.println("Wild Animal");
+        System.out.println("Domestic Animal");
 
-        WildAnimal wildAnimal = new WildAnimal();
-        wildAnimal.tame = "Difficult to tame";
-        System.out.println(wildAnimal.tame);
-        wildAnimal.accommodation = "Accommodates hard to new home";
-
-        System.out.println("Activity: Fetch");
-       Fetch fetch = new Fetch();
-       fetch.cost = 0;
-       fetch.happinessGain = 6;
-        System.out.println("Cost for this activity is = " + fetch.cost);
-        System.out.println("Happiness gain is = " + fetch.happinessGain + "/10");
+        DomesticAnimal domesticAnimal = new DomesticAnimal();
+        domesticAnimal.tame = "Easy to tame";
+        System.out.println(domesticAnimal.tame);
+        domesticAnimal.accommodation = "Easy accommodation in new home";
+        System.out.println(domesticAnimal.accommodation);
 
     }
 
