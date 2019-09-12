@@ -8,19 +8,20 @@ public class App {
 
 
         Animal animal = new Animal("Rex");
-        animal.favoriteActivity = "Fetch";
-        animal.favoriteFood = "Bones";
-        animal.age = 5;
-        animal.happiness = 55;
-        animal.health = 70;
-        animal.hungerLevel = 46;
+        animal.setFavoriteActivity("Fetch");
+        animal.setFavoriteFood("Bones");
+        animal.setAge(5);
+        animal.setHappiness(55);
+        animal.setHealth(70);
+        animal.setHungerLevel(46);
 
-        System.out.println("Hunger level for this animal is: " + animal.hungerLevel + "/100");
-        System.out.println("Health level for this animal is: " + animal.health + "/100");
-        System.out.println("Happiness level for this animal is: " + animal.happiness + "/100");
+        System.out.println("Hunger level for this animal is: " + animal.getHungerLevel() + "/100");
+        System.out.println("Health level for this animal is: " + animal.getHealth() + "/100");
+        System.out.println("Happiness level for this animal is: " + animal.getHappiness() + "/100");
 
 
-        Food food = new Food("bones", 15.4, 7, "yes", LocalDate.now());
+        Food food = new Food("bones", 16.5, 7, "yes", LocalDate.now());
+        System.out.println(food.getName());
 
 
         RecreationalActivity recreationalActivity = new RecreationalActivity("Fetch");
@@ -32,9 +33,6 @@ public class App {
         Dog dog = new Dog("Hard", "Medium");
 
         Game game = new Game();
-        game.veterinarian = veterinarian;
-        game.dog = dog;
-        game.rescuer = rescuer;
 
     }
 
