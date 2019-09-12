@@ -1,69 +1,40 @@
 package org.fasttrackit;
 
+import java.time.LocalDate;
+
 public class App {
     public static void main(String[] args) {
-        Rescuer rescuer = new Rescuer();
-        rescuer.name = "Arnold";
-        System.out.println("Rescuer = " + rescuer.name);
-        rescuer.moneyAvailable = 15.5;
-        System.out.println("Money Available = " + rescuer.moneyAvailable);
+        Rescuer rescuer = new Rescuer("Arnold", 103.6);
 
-        Animal animal = new Animal();
-        animal.name = "Ianos";
-        System.out.println("Animal Name = " + animal.name);
-        animal.age = 4;
-        System.out.println("Animal Age = " + animal.age);
-        animal.hungerLevel = 6;
-        System.out.println("Hunger Level = " + animal.hungerLevel + "/10");
-        animal.health = 2;
-        System.out.println("Health = " + animal.health + "/10");
-        animal.favoriteFood = "Bones";
-        System.out.println("Favorite food = " + animal.favoriteFood);
+
+        Animal animal = new Animal("Rex");
         animal.favoriteActivity = "Fetch";
-        System.out.println("Favorite Activity = " + animal.favoriteActivity);
-        animal.happiness = 3;
-        System.out.println("Animal Happiness = " + animal.happiness + "/10");
+        animal.favoriteFood = "Bones";
+        animal.age = 5;
+        animal.happiness = 55;
+        animal.health = 70;
+        animal.hungerLevel = 46;
 
-        Food food = new Food();
-        food.name = "Bones";
-        System.out.println("Food Name = " + food.name);
-        food.price = 13.4;
-        System.out.println("Price = " + food.price);
-        food.quantity = 20;
-        System.out.println("Quantity = " + food.quantity);
-        food.currentlyAvailable = "Yes";
-        System.out.println("Currently Available = " + food.currentlyAvailable);
+        System.out.println("Hunger level for this animal is: " + animal.hungerLevel + "/100");
+        System.out.println("Health level for this animal is: " + animal.health + "/100");
+        System.out.println("Happiness level for this animal is: " + animal.happiness + "/100");
 
 
-        RecreationalActivity recreationalActivity = new RecreationalActivity();
-        recreationalActivity.name = "Fetch";
-        System.out.println("Recreational Activity = " + recreationalActivity.name);
+        Food food = new Food("bones", 15.4, 7, "yes", LocalDate.now());
 
-        System.out.println("Activity: Fetch");
-        Fetch fetch = new Fetch();
-        fetch.cost = 0;
-        fetch.happinessGain = 6;
-        System.out.println("Cost for this activity is = " + fetch.cost);
-        System.out.println("Happiness gain is = " + fetch.happinessGain + "/10");
 
-        Veterinarian veterinarian = new Veterinarian();
-        veterinarian.name = "Mike";
-        System.out.println("Veterinarian Name = " + veterinarian.name);
-        veterinarian.specialization = "Surgery";
-        System.out.println("Specialization = " + veterinarian.specialization);
+        RecreationalActivity recreationalActivity = new RecreationalActivity("Fetch");
+
+
+        Veterinarian veterinarian = new Veterinarian("Marcela", "Surgery");
+
+
+        Dog dog = new Dog("Hard", "Medium");
 
         Game game = new Game();
-        game.rescuer = "Maria";
-        game.dog = "Ianos";
-        game.veterinarian = "Mike";
-
-        System.out.println("Domestic Animal");
-
-        DomesticAnimal domesticAnimal = new DomesticAnimal();
-        domesticAnimal.tame = "Easy to tame";
-        System.out.println(domesticAnimal.tame);
-        domesticAnimal.accommodation = "Easy accommodation in new home";
-        System.out.println(domesticAnimal.accommodation);
+        game.veterinarian = veterinarian;
+        game.dog = dog;
+        game.rescuer = rescuer;
 
     }
 

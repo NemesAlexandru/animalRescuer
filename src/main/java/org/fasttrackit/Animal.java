@@ -8,4 +8,8 @@ public class Animal {
     int happiness;
     String favoriteFood;
     String favoriteActivity;
+
+    public Animal(String name) {
+        this.name = name;
+    }
 }
