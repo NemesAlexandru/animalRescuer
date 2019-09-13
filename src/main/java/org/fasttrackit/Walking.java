@@ -1,11 +1,11 @@
 package org.fasttrackit;
 
-public class Fetch extends RecreationalActivity {
+public class Walking extends RecreationalActivity {
     private int happinessGain;
     private int cost;
 
-    public Fetch(int happinessGain, int cost) {
-        super("Fetch");
+    public Walking(int happinessGain, int cost) {
+        super("Walking");
         this.happinessGain = happinessGain;
         this.cost = cost;
     }
@@ -25,4 +25,5 @@ public class Fetch extends RecreationalActivity {
     public void setCost(int cost) {
         this.cost = cost;
     }
+
 }

@@ -5,7 +5,7 @@ public class Dog extends Animal {
     private String accommodationDifficulty;
 
     public Dog(String tamingDifficulty, String accommodationDifficulty) {
-        super("Rex");
+        super();
         this.tamingDifficulty = tamingDifficulty;
         this.accommodationDifficulty = accommodationDifficulty;
     }

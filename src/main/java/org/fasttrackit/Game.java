@@ -28,4 +28,5 @@ public class Game {
     public void setVeterinarian(Veterinarian veterinarian) {
         this.veterinarian = veterinarian;
     }
+
 }
