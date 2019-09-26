@@ -1,5 +1,7 @@
 package org.fasttrackit;
 
+import org.w3c.dom.ls.LSOutput;
+
 public class Animal {
     private String name;
     private int age;
@@ -72,4 +74,11 @@ public class Animal {
     public void setFavoriteActivity(String favoriteActivity) {
         this.favoriteActivity = favoriteActivity;
     }
+
+    public void showMood() {
+        System.out.println("Mood level for animal " + getName() + " is: " + getHappiness() + "/10.");
+    }
+
 }
+
+

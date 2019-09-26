@@ -15,6 +15,7 @@ public class App {
         animal.setHappiness(5);
         animal.setHealth(7);
         animal.setHungerLevel(4);
+        animal.setName("Rex");
 
         System.out.println("Animal name: " + animal.getName());
         System.out.println("Hunger level for this animal is: " + animal.getHungerLevel() + "/10");
@@ -42,6 +43,8 @@ public class App {
         Dog dog = new Dog("Hard", "Medium");
         System.out.println("Taming difficulty for this animal is " + dog.getTamingDifficulty());
         System.out.println("Accommodation difficulty level for this animal is " + dog.getAccommodationDifficulty());
+        dog.setHappiness(5);
+        dog.setName("Cicor");
 
         Game game = new Game();
 
@@ -49,5 +52,10 @@ public class App {
         rescuer.playFetch(animal, recreationalActivity);
 
         Walking walking = new Walking(4, 0);
+
+        animal.showMood();
+        dog.showMood();
+
     }
+
 }
