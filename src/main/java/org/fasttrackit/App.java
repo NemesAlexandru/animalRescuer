@@ -39,7 +39,7 @@ public class App {
         System.out.println("Veterinarian name is " + veterinarian.getName());
         System.out.println("Veterinarian specialization is: " + veterinarian.getSpecialization());
 
-
+        //Polymorphism
         Animal dog = new Dog("Hard", "Medium");
         //System.out.println("Taming difficulty for this animal is " + dog.getTamingDifficulty());
         //System.out.println("Accommodation difficulty level for this animal is " + dog.getAccommodationDifficulty());
@@ -48,6 +48,7 @@ public class App {
 
         Game game = new Game();
 
+        //Polymorphism
         Animal cat = new Cat();
         cat.setName("Mio");
         cat.setHappiness(8);
