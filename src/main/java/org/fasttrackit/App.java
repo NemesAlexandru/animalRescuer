@@ -40,13 +40,17 @@ public class App {
         System.out.println("Veterinarian specialization is: " + veterinarian.getSpecialization());
 
 
-        Dog dog = new Dog("Hard", "Medium");
-        System.out.println("Taming difficulty for this animal is " + dog.getTamingDifficulty());
-        System.out.println("Accommodation difficulty level for this animal is " + dog.getAccommodationDifficulty());
+        Animal dog = new Dog("Hard", "Medium");
+        //System.out.println("Taming difficulty for this animal is " + dog.getTamingDifficulty());
+        //System.out.println("Accommodation difficulty level for this animal is " + dog.getAccommodationDifficulty());
         dog.setHappiness(5);
         dog.setName("Cicor");
 
         Game game = new Game();
+
+        Animal cat = new Cat();
+        cat.setName("Mio");
+        cat.setHappiness(8);
 
         rescuer.feed(animal, food);
         rescuer.playFetch(animal, recreationalActivity);
@@ -55,7 +59,8 @@ public class App {
 
         animal.showMood();
         dog.showMood();
+        cat.showMood();
+
 
     }
-
 }

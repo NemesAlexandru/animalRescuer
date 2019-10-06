@@ -4,6 +4,7 @@ public class Dog extends Animal {
     private String tamingDifficulty;
     private String accommodationDifficulty;
 
+    //constructor
     public Dog(String tamingDifficulty, String accommodationDifficulty) {
         super();
         this.tamingDifficulty = tamingDifficulty;

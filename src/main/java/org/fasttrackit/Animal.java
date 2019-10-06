@@ -78,7 +78,6 @@ public class Animal {
     public void showMood() {
         System.out.println("Mood level for animal " + getName() + " is: " + getHappiness() + "/10.");
     }
-
 }
 
 

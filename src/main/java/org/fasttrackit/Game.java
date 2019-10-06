@@ -3,6 +3,9 @@ package org.fasttrackit;
 public class Game {
     private Rescuer rescuer;
     private Dog dog;
+    private Dog dog1;
+    private Cat cat;
+    private Cat cat1;
     private Veterinarian veterinarian;
 
     public Rescuer getRescuer() {
