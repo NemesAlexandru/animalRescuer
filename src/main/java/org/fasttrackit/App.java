@@ -47,6 +47,7 @@ public class App {
         dog.setName("Cicor");
 
         Game game = new Game();
+        game.start();
 
         //Polymorphism
         Animal cat = new Cat();

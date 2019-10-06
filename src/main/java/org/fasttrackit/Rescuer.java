@@ -39,7 +39,7 @@ public class Rescuer {
 
         System.out.println("Current animal hunger level is: " + animal.getHungerLevel() + "/10");
         System.out.println(this.getName() + " just gave some " + food.getName()+ " food to " + animal.getName());
-        animal.setHungerLevel(animal.getHungerLevel() + 1);
+        animal.setHungerLevel(animal.getHungerLevel() - 1);
         System.out.println("New hunger level for this animal is: " + animal.getHungerLevel() + "/10");
     }
 
