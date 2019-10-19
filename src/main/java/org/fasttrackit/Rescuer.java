@@ -25,11 +25,11 @@ public class Rescuer {
         this.moneyAvailable = moneyAvailable;
     }
 
-    public void feed(Animal animal, Food food) {
+    public void feed (Animal animal, Food food) {
         if (animal.getFavoriteFood().equals(food.getName())){
             System.out.println("The animal loves this food");
             animal.setHappiness(animal.getHappiness()+1);
-            System.out.println("Animal happiness level is: " + animal.getHappiness());
+            System.out.println("Animal happiness level is: " + animal.getHappiness() + "/10");
         }
 
         else {
@@ -43,17 +43,18 @@ public class Rescuer {
         System.out.println("New hunger level for this animal is: " + animal.getHungerLevel() + "/10");
     }
 
-    public void playFetch (Animal animal, RecreationalActivity recreationalActivity) {
+    public void play (Animal animal, RecreationalActivity recreationalActivity) {
 
         if (animal.getFavoriteActivity().equals(recreationalActivity.getName())) {
-            System.out.println("Current happiness level for " + animal.getName() + " is: " + animal.getHappiness());
+            System.out.println("Animal loves this activity. ");
+            System.out.println("Current happiness level for " + animal.getName() + " is: " + animal.getHappiness() + "/10");
             animal.setHappiness(animal.getHappiness() + 2);
-            System.out.println("New happiness level is: " + animal.getHappiness());
+            System.out.println("New happiness level is: " + animal.getHappiness() + "/10");
         }
         else {
-            System.out.println("Animal hates this food.");
+            System.out.println("Animal hates playing this activity. ");
             animal.setHappiness(animal.getHappiness() + 1);
-            System.out.println("New happiness level is: " + animal.getHappiness());
+            System.out.println("New happiness level is: " + animal.getHappiness() + "/10");
         }
     }
     }

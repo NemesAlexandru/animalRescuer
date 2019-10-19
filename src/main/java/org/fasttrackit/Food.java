@@ -8,13 +8,21 @@ public class Food {
     private int quantity;
     private String currentlyAvailable;
     private LocalDate expiryDate;
+    private int type;
 
-    public Food(String name, double price, int quantity, String currentlyAvailable, LocalDate expiryDate) {
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
+
+    public Food(String name, double price, int quantity, int type) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
-        this.currentlyAvailable = currentlyAvailable;
-        this.expiryDate = expiryDate;
+        this.type = type;
     }
 
     public String getName() {

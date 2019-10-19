@@ -5,11 +5,11 @@ public class Dog extends Animal {
     private String accommodationDifficulty;
 
     //constructor
-    public Dog(String tamingDifficulty, String accommodationDifficulty) {
-        super();
-        this.tamingDifficulty = tamingDifficulty;
-        this.accommodationDifficulty = accommodationDifficulty;
-    }
+//    public Dog(String tamingDifficulty, String accommodationDifficulty) {
+//        super();
+//        this.tamingDifficulty = tamingDifficulty;
+//        this.accommodationDifficulty = accommodationDifficulty;
+//    }
 
     public String getTamingDifficulty() {
         return tamingDifficulty;
@@ -26,7 +26,9 @@ public class Dog extends Animal {
     public void setAccommodationDifficulty(String accommodationDifficulty) {
         this.accommodationDifficulty = accommodationDifficulty;
     }
-public void showMood () {
+
+
+    public void showMood () {
 if (getHappiness() > 5) {
     System.out.println("Dog " + getName() + "'s happiness level is: " + getHappiness() + "/10.");
     System.out.println("Dog wags his tail. He is happy.");
