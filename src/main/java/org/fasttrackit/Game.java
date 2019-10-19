@@ -212,7 +212,6 @@ public class Game {
             System.out.println("Remaining budget: " + rescuer.getMoneyAvailable() + "$");
         } else {
             System.out.println("Not enough money to feed " + animal.getName() + " with " + FoodList.get(x).getName());
-            requirePlaying();
         }
     }
 
@@ -279,7 +278,6 @@ public class Game {
             System.out.println("Remaining budget: " + rescuer.getMoneyAvailable() + "$");
         } else {
             System.out.println("Not enough money to play this activity. ");
-            requireFeeding();
         }
     }
 
