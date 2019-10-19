@@ -41,21 +41,23 @@ public class Game {
                 } else {
                     break;
                 }
-            }
-            if (rescuer.getMoneyAvailable() < 5) {
-                winnerNotKnown = false;
-                System.out.println("\n");
-                System.out.println("Game over");
-                System.out.println("Your remaining budget: " + rescuer.getMoneyAvailable() + "$");
-                System.out.println("Hunger Level: " + animal.getHungerLevel() + "/10");
-                System.out.println("Happiness level: " + animal.getHappiness() + "/10");
-            } else if (animal.getHappiness() >= 8 && animal.getHungerLevel() <= 5) {
-                winnerNotKnown = false;
-                System.out.println("\n");
-                System.out.println("You win. Animal is happy. ");
-                System.out.println("Your remaining budget: " + rescuer.getMoneyAvailable() + "$");
-                System.out.println("Hunger Level: " + animal.getHungerLevel() + "/10");
-                System.out.println("Happiness level: " + animal.getHappiness() + "/10");
+
+                if (rescuer.getMoneyAvailable() < 5) {
+                    winnerNotKnown = false;
+                    System.out.println("\n");
+                    System.out.println("Game over");
+                    System.out.println("Your remaining budget: " + rescuer.getMoneyAvailable() + "$");
+                    System.out.println("Hunger Level: " + animal.getHungerLevel() + "/10");
+                    System.out.println("Happiness level: " + animal.getHappiness() + "/10");
+                    break;
+                } else if (animal.getHappiness() >= 8 && animal.getHungerLevel() <= 5) {
+                    winnerNotKnown = false;
+                    System.out.println("\n");
+                    System.out.println("You win. Animal is happy. ");
+                    System.out.println("Your remaining budget: " + rescuer.getMoneyAvailable() + "$");
+                    System.out.println("Hunger Level: " + animal.getHungerLevel() + "/10");
+                    System.out.println("Happiness level: " + animal.getHappiness() + "/10");
+                }
             }
         }
 
