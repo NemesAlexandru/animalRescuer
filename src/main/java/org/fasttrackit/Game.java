@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class Game {
     private Rescuer rescuer;
@@ -67,6 +68,11 @@ public class Game {
 
         System.out.println("Please enter your name. ");
         Scanner scanner = new Scanner(System.in);
+        while (!scanner.hasNext("[a-zA-Z]+")) {
+            System.out.println("Name must contain only letters.");
+            scanner.nextLine();
+        }
+
         try {
             String chosenName = scanner.nextLine();
             rescuer = new Rescuer(chosenName, 50);
@@ -83,6 +89,10 @@ public class Game {
     private void nameAnimal() {
         System.out.println("Please name the rescued animal. ");
         Scanner scanner = new Scanner(System.in);
+        while (!scanner.hasNext("[a-zA-Z]+")) {
+            System.out.println("Name must contain only letters.");
+            scanner.nextLine();
+        }
         try {
             //storing name for either a dog or a cat in chosenNameAnimal variable
             chosenNameAnimal = scanner.nextLine();
@@ -93,16 +103,27 @@ public class Game {
         }
     }
 
+    private int typeChoice() {
+        Scanner scanner = new Scanner(System.in);
+        int x;
+        try {
+            x = scanner.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid number. Try again. ");
+            return rescuerChoice();
+        }
+        if (x > 2 || x < 1) {
+            System.out.println("Invalid choice");
+            return typeChoice();
+        }
+        return x - 1;
+    }
+
     private void initAnimal() {
 
         System.out.println("What type of animal would you like to rescue? \n1. Dog \n2. Cat");
-        Scanner scanner = new Scanner(System.in);
-        try {
-            animalType = scanner.nextInt();
-        } catch (InputMismatchException e) {
-            System.out.println("You have to choose a number, try again");
-            initAnimal();
-        }
+
+        animalType = typeChoice();
         if (animalType == 1) {
             int Happiness = 5;
             int Hunger = 7;
@@ -178,21 +199,6 @@ public class Game {
             }
         }
     }
-
-
-//    private void initCatFood() {
-//        Food food = new Food("Beans", 5, 10, "Yes");
-//        catFoodList.add(food);
-//        Food food2 = new Food("Sticks", 2, 8, "No");
-//        catFoodList.add(food2);
-//        for (int i = 0; i <= catFoodList.size(); i++) {
-//            if (i >= 0 && i <= 2) {
-//                System.out.println((i + 1) + ". " + catFoodList.get(i).getName());
-//            } else if (i > 2) {
-//                System.out.println((i + 1) + ". " + "Feed the cat later...");
-//            }
-//        }
-//    }
 
 
     private void requireFeeding() {
